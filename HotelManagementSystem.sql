@@ -36,13 +36,21 @@ create table Customer(
     password nvarchar(30) NOT NULL
 );
 
-create table Reservation(
-     ReservationId int NOT NULL PRIMARY KEY,
+create table Booking(
+     BookingId int NOT NULL PRIMARY KEY,
 	 CustomerId int NOT NULL,
 	 RoomId int NOT NULL,
-	 ReservationDate date NOT NULL,
+	 BookingDate date NOT NULL,
 	 DateCheckIn date NOT NULL,
 	 DateCheckOut date NOT NULL
+);
+
+create table BookingDetail(
+     BookingDetailId int NOT NULL PRIMARY KEY,
+     BookingId int NOT NULL,
+     RoomName nvarchar(30) NOT NULL,
+     RoomPrice nvarchar(30) NOT NULL,
+     Quantity int NOT NULL
 );
 
 create table Feedback(
@@ -54,7 +62,7 @@ create table Feedback(
 
 create table Payment(
     PaymentId int NOT NULL PRIMARY KEY,
-    ReservationId int NOT NULL,
+    BookingId int NOT NULL,
     PaymentDate date NOT NULL,
     PaymentDetail text NOT NULL,
     Amount float(10,2) NOT NULL,
@@ -67,14 +75,17 @@ REFERENCES Customer (CustomerId);
 ALTER TABLE Room ADD CONSTRAINT FK_Room FOREIGN KEY(RoomClassId)
 REFERENCES RoomClass (RoomClassId);
 
-ALTER TABLE Reservation ADD CONSTRAINT FK_Reservation FOREIGN KEY(CustomerId)
+ALTER TABLE Booking ADD CONSTRAINT FK_Reservation FOREIGN KEY(CustomerId)
 REFERENCES Customer(CustomerId);
 
-ALTER TABLE Reservation ADD CONSTRAINT FK_Reservation_2 FOREIGN KEY(RoomId)
+ALTER TABLE Booking ADD CONSTRAINT FK_Reservation_2 FOREIGN KEY(RoomId)
 REFERENCES Room (RoomId);
 
-ALTER TABLE Payment ADD CONSTRAINT FK_Payment FOREIGN KEY(ReservationId)
-REFERENCES Reservation (ReservationId);
+ALTER TABLE BookingDetail ADD CONSTRAINT FK_Booking FOREIGN KEY(BookingId)
+REFERENCES Booking (BookingId);
+
+ALTER TABLE Payment ADD CONSTRAINT FK_Payment FOREIGN KEY(BookingId)
+REFERENCES Booking (BookingId);
 
 INSERT INTO RoomClass VALUES (1, 'Single');
 INSERT INTO RoomClass VALUES (2, 'Double');
@@ -97,7 +108,7 @@ VALUES (5, 5, 'A single room with a bed and sitting area. Sometimes the sleeping
 INSERT INTO Room
 VALUES (6, 6, 'The most expensive room provided by a hotel. Usually, only one president suite is available in one single hotel property. Similar to the normal suites, a president suite always has one or more bedrooms and a living space with a strong emphasis on grand in-room decoration, high-quality amenities and supplies, and tailor-made services', '900');
 INSERT INTO Room
-VALUES (7, 7, 'ooms with individual entrance doors from the outside and a connecting door between. Guests can move between rooms without going through the hallway.', '600');
+VALUES (7, 7, 'Rooms with individual entrance doors from the outside and a connecting door between. Guests can move between rooms without going through the hallway.', '600');
 
 INSERT INTO Customer(CustomerName, Address, Phone, Email, username, password) VALUES ('Jennie Nichols', 'Valwood Pkwy United States', '0985795912', 'jennie.nichols@example.com', 'jennie', 'adison');
 INSERT INTO Customer(CustomerName, Address, Phone, Email, username, password) VALUES ('Hồ Sĩ Hòa', 'Khánh Hòa Việt Nam', '0782961437', 'HoSiHoa@gmail.com', 'hoa', 'hoahoa');
@@ -109,6 +120,7 @@ INSERT INTO Staff VALUES (2, 'Trần Thị Hoàng Lam', 'hoanglamstaff', 'hoangl
 
 INSERT INTO Admin VALUES (1, 'admin1', 'admin1', 1);
 INSERT INTO Admin VALUES (2, 'admin2', 'admin2', 1);
+
 
 
 
