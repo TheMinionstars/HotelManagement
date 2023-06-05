@@ -11,16 +11,45 @@
 }
 
 .footer{
-    background-color: #D1C4E9;
+    background-color: #e28048;
     margin: 0px auto;
     padding: 20px 0px 20px 0px;
+    color: #ECF8F9;
 }
 
 body{
     padding: 50px 0px 0px 0px;
     z-index: 0;
+    background-color: #ECF8F9;
 }
 
 .navbar-dark{
-    background-color: #FF6600	;
+    background-color: #e28048	;
+}
+
+.tab-content {
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+.carousel {
+    background:#e28048;
+}
+.carousel-item {
+  height: 300px;
+}
+.carousel-item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
+
+#carouselButton {
+    right:0px;
+    position: absolute;
+    bottom: 0px;
+    z-index: 1;
 }

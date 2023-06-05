@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
     <link rel="stylesheet" href="node_modules/bootstrap-social/bootstrap-social.css">
     <link href="css/styles.css" rel="stylesheet">
+    <script src="js/scripts.js"></script>
 </head>
 
 <body>
@@ -22,83 +23,333 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <a class="navbar-brand" href="#">FBT Hotel</a>
+            <a class="navbar-brand mr-auto" href="#"><img src="img/Logo2.png" height="60" width="60"></a>
             <div class="collapse navbar-collapse" id="Navbar">
                 <ul class="navbar-nav mr-auto">
-                        <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span> Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info fa-lg"></span> About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span> Contact</a></li>
+                    <li class="nav-item active"><a class="nav-link" href="#"><span class="fa fa-home fa-lg"></span>
+                            Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span
+                                class="fa fa-info fa-lg"></span> About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="fa fa-list fa-lg"></span> Menu</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span
+                                class="fa fa-address-card fa-lg"></span> Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login</a>
+                </span>
             </div>
         </div>
     </nav>
+
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #e28048;">
+                    <h4 class="modal-title">Login </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" style="background-color: #e9ecef;">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
+                                    placeholder="Enter email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label class="sr-only" for="exampleInputPassword3">Password</label>
+                                <input type="password" class="form-control form-control-sm mr-1"
+                                    id="exampleInputPassword3" placeholder="Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox">
+                                    <label class="form-check-label"> Remember me
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <button type="button" class="btn btn-secondary btn-sm ml-auto"
+                                data-dismiss="modal">Cancel</button>
+                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header class="jumbotron">
         <div class="container">
             <div class="row row-header">
                 <div class="col-12 col-sm-6">
                     <h1>FBT Hotel</h1>
-                    <p>A good hotel room should be like a good pair of shoes - it should be comfortable, stylish, and make you feel confident and at ease!</p>
+                    <p>A good hotel room should be like a good pair of shoes - it should be comfortable, stylish, and
+                        make you feel confident and at ease!</p>
                 </div>
-                <div class="col-12 col-sm">
+                <div class="col-12 col-sm-3 align-self-center">
+                    <img src="img/Logo1.png" height="150" width="150" class="img-fluid">
+                </div>
+                <div class="col-12 col-sm-3 align-self-center">
+                    <button class="btn btn-sm btn-warning btn-block"><a data-toggle="modal" data-target="#ReserveRoom">
+                            Reserve Room</a></button>
                 </div>
             </div>
         </div>
     </header>
 
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-               <h3>Home</h3>
-               <hr>
+
+
+    <div id="ReserveRoom" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header" style="background-color: #e28048;">
+                    <h4 class="modal-title">Reserve a Room </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body" style="background-color: #e9ecef;">
+                    <form>
+                        <div class="form-group row">
+                            <div class=" col-sm-2">Number of Guests</div>
+                            <div class="col-sm-10">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio3" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio4" value="option4">
+                                    <label class="form-check-label" for="inlineRadio4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio5" value="option5">
+                                    <label class="form-check-label" for="inlineRadio5">5</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-2">Kind of Room</div>
+                            <button type="button" class="col-sm-2 btn btn-success">Single Room</button>
+                            <button type="button" class="col-sm-3 btn btn-primary">Couple Room</button>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-2">Check-in</div>
+                            <div class="col-sm-3"><input type="date"></div>
+                            <div class="col-sm-2"><input type="time"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-2">Check-out</div>
+                            <div class="col-sm-3"><input type="date"></div>
+                            <div class="col-sm-2"><input type="time"></div>
+                        </div>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                        <button class="btn btn-warning" type="submit">Reserve</button>
+                    </form>
+                </div>
             </div>
         </div>
+    </div>
 
+    <div class="container content">
         <div class="row row-content">
-           <div class="col-12">
-              <h3>Location Information</h3>
-           </div>
-            <div class="col-12 col-sm-4 offset-sm-1">
-                   <h5>Our Address</h5>
-                    <address style="font-size: 100%">
-                        Đất Thổ Cư Hòa Lạc, Km29 Đường Cao Tốc 08, Thạch Hoà, Thạch Thất, Hà Nội 10000<br>
-		              <i class="fa fa-phone"></i>: +84 389 887 060<br>
-		              <i class="fa fa-envelope"></i>:
-                        <a href="mailto:duongcuute2002@gmail.com">duongcuute2002@gmail.com</a>
-		           </address>
-            </div>
-            <div class="col-12 col-sm-6 offset-sm-1">
-                <h5>Map of our Location</h5>
-            </div>
-            <div class="col-12 col-sm-11 offset-sm-1">
-                Button group goes here
+            <div class="col">
+                <div id="mycarousel" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner" role="listbox">
+                        <div class="carousel-item active">
+                            <img src="img/HotRoom.jpg" alt="HotHotel" class="d-block img-fluid" width="270">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2 class="mt-0">LoLy Room <span class="badge badge-danger">HOT</span></h2>
+                                <p class="d-none d-sm-block">A luxurious and sophisticated accommodation option within
+                                    the
+                                    prestigious FBT Hotel. The rooms are meticulously designed with a perfect balance of
+                                    contemporary style and timeless charm. Guests can expect spaciousness, modern
+                                    amenities, and a
+                                    tranquil atmosphere to enhance their stay.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/NewService.jpeg" alt="NewService" class="d-block img-fluid" width="270">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2 class="mt-0"> Infinity Pool <span class="badge badge-danger">New</span></h2>
+                                <p class="d-none d-sm-block">An infinity pool is a remarkable feature found in luxury
+                                    hotels
+                                    worldwide. Also known as a vanishing edge pool, it creates the illusion that the
+                                    water stretches
+                                    to the horizon, seamlessly blending with the surrounding landscape or view. These
+                                    pools are
+                                    often situated on elevated terraces or cliffside locations, providing guests with
+                                    breathtaking
+                                    panoramas.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="img/duong.JPG" alt="duong" class="d-block img-fluid" height="60" width="240">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2 class="mt-0">Quy Duong</h2>
+                                <h4>CEO</h4>
+                                <p class="d-none d-sm-block">A position he holds with dedication and expertise. With
+                                    extensive
+                                    experience in hotel management, he has propelled LoLy Hotel to become a premier
+                                    destination for
+                                    discerning travelers.
+                                </p>
+                            </div>
+                        </div>
+                        <ol class="carousel-indicators">
+                            <li data-target="#mycarousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#mycarousel" data-slide-to="1"></li>
+                            <li data-target="#mycarousel" data-slide-to="2"></li>
+                        </ol>
+                        <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#mycarousel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+                        <button class="btn btn-danger btn-sm" id="carouselButton">
+                            <span id="carousel-button-icon" class="fa fa-pause"></span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
+    </div>
 
-        <div class="row row-content">
-           <div class="col-12">
-              <h3>Send us your Feedback</h3>
-           </div>
-            <div class="col-12 col-md-9">
-                Form goes here
+    <div class="container content">
+        <div class="row align-items-start row-content">
+            <div class="media col-md-9">
+                <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/HotRoom.jpg" alt="HotHotel"
+                    height="100" width="300">
+                <div class="media-body">
+                    <h2 class="mt-0">LoLy Room <span class="badge badge-danger">HOT</span></h2>
+                    <p class="d-none d-sm-block">A luxurious and sophisticated accommodation option within the
+                        prestigious FBT Hotel. The rooms are meticulously designed with a perfect balance of
+                        contemporary style and timeless charm. Guests can expect spaciousness, modern amenities, and a
+                        tranquil atmosphere to enhance their stay.</p>
+                </div>
             </div>
-             <div class="col-12 col-md">
+            <div class="col-md-1"></div>
+            <h2 class="col-md-2">Your Experience Always Comes First.</h2>
+        </div>
+    </div>
+
+    <div class="container content">
+        <div class="media flex-md-row-reverse row align-items-center row-content">
+            <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/NewService.jpeg" alt="pool" height="100"
+                width="300">
+            <div class="media-body">
+                <h2 class="mt-0"> Infinity Pool <span class="badge badge-danger">New</span></h2>
+                <p class="d-none d-sm-block">An infinity pool is a remarkable feature found in luxury hotels
+                    worldwide. Also known as a vanishing edge pool, it creates the illusion that the water stretches
+                    to the horizon, seamlessly blending with the surrounding landscape or view. These pools are
+                    often situated on elevated terraces or cliffside locations, providing guests with breathtaking
+                    panoramas.</p>
             </div>
-       </div>
+            <div class="col-md-1"></div>
+            <h2 class="col-md-2">Creative and New</h2>
+        </div>
+    </div>
+
+    <div class="container content">
+        <div class="media row align-items-center row-content">
+            <img class="d-flex mr-3 img-thumbnail align-self-center" src="img/duong.JPG" alt="duong pic" height="60"
+                width="140">
+            <div class="media-body">
+                <h2 class="mt-0">Quy Duong</h2>
+                <h4>CEO</h4>
+                <p class="d-none d-sm-block">A position he holds with dedication and expertise. With extensive
+                    experience in hotel management, he has propelled LoLy Hotel to become a premier destination for
+                    discerning travelers.
+                </p>
+            </div>
+            <div class="col-md-1"></div>
+            <h2 class="col-md-2">Meet our Web Developer</h2>
+        </div>
+    </div>
+
+    <div class="container content">
+        <div class="row-content col-sm-8 align-items-center col-12">
+            <div class="card ">
+                <div class="card-header" style="background-color: #e28048;">Reserve a Room</div>
+                <div class="card-body" style="background-color: #e9ecef;">
+                    <form>
+                        <div class="form-group row">
+                            <div class=" col-sm-2">Number of Guests</div>
+                            <div class="col-sm-10">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio1" value="option1">
+                                    <label class="form-check-label" for="inlineRadio1">1</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio2" value="option2">
+                                    <label class="form-check-label" for="inlineRadio2">2</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio3" value="option3">
+                                    <label class="form-check-label" for="inlineRadio3">3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio4" value="option4">
+                                    <label class="form-check-label" for="inlineRadio4">4</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="inlineRadioOptions"
+                                        id="inlineRadio5" value="option5">
+                                    <label class="form-check-label" for="inlineRadio5">5</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <div class="col-sm-2">Check-in</div>
+                            <div class="col-sm-3"><input type="date"></div>
+                            <div class="col-sm-2"><input type="time"></div>
+                        </div>
+                        <div class="form-group row">
+                            <div class="col-sm-2">Check-out</div>
+                            <div class="col-sm-3"><input type="date"></div>
+                            <div class="col-sm-2"><input type="time"></div>
+                        </div>
+                        <button class="btn btn-warning" type="submit">Reserve</button>
+                    </form>
+                </div>
+            </div>
+        </div>
 
     </div>
 
+
     <footer class="footer">
         <div class="container">
-            <div class="row">             
-                <div class="col-4 offset-1 col-sm-2">
+            <div class="row">
+                <div class="col-4 offset-1 col-sm-2 ">
                     <h5>Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Menu</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#" style="color: #1b7297;">Home</a></li>
+                        <li><a href="./aboutus.html" style="color: #1b7297;">About</a></li>
+                        <li><a href="#" style="color: #1b7297;">Menu</a></li>
+                        <li><a href="./contactus.html" style="color: #1b7297;">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-7 col-sm-5">
@@ -106,32 +357,62 @@
                     <address>
                         Đất Thổ Cư Hòa Lạc, Km29 Đường Cao Tốc 08, Thạch Hoà, Thạch Thất, Hà Nội 10000<br>
                         <br>
-                      <i class="fa fa-phone fa-lg"></i>: +84 389 887 060<br>
-                      <a href="mailto:duongcuute2002@gmail.com">duongcuute2002@gmail.com</a>
-		           </address>
+                        <i class="fa fa-phone fa-lg"></i>: +84 389 887 060<br>
+                        <a href="mailto:duongcuute2002@gmail.com" style="color: #1b7297;">duongcuute2002@gmail.com</a>
+                    </address>
                 </div>
                 <div class="col-12 col-sm-4 align-self-center">
                     <div class="text-center">
-                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i class="fa fa-google-plus"></i></a>
-                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i class="fa fa-facebook"></i></a>
-                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i class="fa fa-linkedin"></i></a>
-                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i class="fa fa-twitter"></i></a>
-                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://google.com/+"><i
+                                class="fa fa-google-plus"></i></a>
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="><i
+                                class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i
+                                class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i
+                                class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-google" href="http://youtube.com/"><i
+                                class="fa fa-youtube"></i></a>
                         <a class="btn btn-social-icon" href="mailto:"><i class="fa fa-envelope-o"></i></a>
                     </div>
                 </div>
-           </div>
-           <div class="row justify-content-center">             
+            </div>
+            <div class="row justify-content-center">
                 <div class="col-auto">
                     <p>© Copyright 2023 FBT Hotel</p>
                 </div>
-           </div>
+            </div>
         </div>
     </footer>
     <!-- jQuery first, then Popper.js, then Bootstrap JS. -->
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
+
+
+    <script>
+        $("#carouselButton").click(function () {
+            if ($("#carouselButton").children("span").hasClass('fa-pause')) {
+                $("#mycarousel").carousel('pause');
+                $("#carouselButton").children("span").removeClass('fa-pause');
+                $("#carouselButton").children("span").addClass('fa-play');
+            }
+            else if ($("#carouselButton").children("span").hasClass('fa-play')) {
+                $("#mycarousel").carousel('cycle');
+                $("#carouselButton").children("span").removeClass('fa-play');
+                $("#carouselButton").children("span").addClass('fa-pause');
+            }
+        });
+
+    </script>
+
+
 </body>
 
 </html>
