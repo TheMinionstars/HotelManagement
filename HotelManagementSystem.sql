@@ -69,6 +69,13 @@ create table Payment(
     Status varchar(10) NOT NULL
 );
 
+create table Blog(
+	BlogId int NOT NULL PRIMARY KEY,
+    Title text NOT NULL,
+    Content text NOT NULL,
+    DateCreated date NOT NULL
+);
+
 ALTER TABLE Feedback ADD CONSTRAINT FK_Feedback FOREIGN KEY(CustomerId)
 REFERENCES Customer (CustomerId);
 
@@ -117,6 +124,9 @@ INSERT INTO Customer(CustomerName, Address, Phone, Email, username, password) VA
 
 INSERT INTO Staff VALUES (1, 'Đoàn Hồng An', 'honganstaff', 'hongan');
 INSERT INTO Staff VALUES (2, 'Trần Thị Hoàng Lam', 'hoanglamstaff', 'hoanglam');
+
+INSERT INTO Admin VALUES (1, 'admin1', 'admin1', 1);
+INSERT INTO Admin VALUES (2, 'admin2', 'admin2', 1);
 
 INSERT INTO Admin VALUES (1, 'admin1', 'admin1', 1);
 INSERT INTO Admin VALUES (2, 'admin2', 'admin2', 1);
