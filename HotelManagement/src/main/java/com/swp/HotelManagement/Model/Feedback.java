@@ -16,8 +16,8 @@ public class Feedback {
     private Integer feedbackId;
 
     @ManyToOne
-    @JoinColumn(name = "customerId")
-    private Customer customer;
+    @JoinColumn(name = "userId")
+    private User user;
 
     private String title;
     private String content;

@@ -5,6 +5,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
 
 @Entity
 @Data
@@ -13,13 +14,17 @@ import lombok.NoArgsConstructor;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer accountId;
+    private Integer userId;
+    private String fullname;
+    private String address;
+    private String phone;
+    private String email;
     private String username;
     private String password;
-    private boolean status;
     private int role;
 
-    @OneToOne
-    @JoinColumn(name = "customerId")
-    private Customer customer;
+    @OneToMany(mappedBy = "user")
+    private List<Blog> blogs;
+
+
 }
