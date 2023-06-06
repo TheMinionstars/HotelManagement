@@ -53,3 +53,8 @@ body{
     bottom: 0px;
     z-index: 1;
 }
+
+.custom-modal {
+    max-width: 400px;
+    margin: auto;
+  }

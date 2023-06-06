@@ -44,44 +44,46 @@
     </nav>
 
     <div id="loginModal" class="modal fade" role="dialog">
-        <div class="modal-dialog modal-lg" role="content">
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header" style="background-color: #e28048;">
-                    <h4 class="modal-title">Login </h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                </div>
-                <div class="modal-body" style="background-color: #e9ecef;">
-                    <form>
-                        <div class="form-row">
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputEmail3">Email address</label>
-                                <input type="email" class="form-control form-control-sm mr-1" id="exampleInputEmail3"
-                                    placeholder="Enter email">
-                            </div>
-                            <div class="form-group col-sm-4">
-                                <label class="sr-only" for="exampleInputPassword3">Password</label>
-                                <input type="password" class="form-control form-control-sm mr-1"
-                                    id="exampleInputPassword3" placeholder="Password">
-                            </div>
-                            <div class="col-sm-auto">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox">
-                                    <label class="form-check-label"> Remember me
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row">
-                            <button type="button" class="btn btn-secondary btn-sm ml-auto"
-                                data-dismiss="modal">Cancel</button>
-                            <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button>
-                        </div>
-                    </form>
-                </div>
+        <div class="modal-dialog modal-lg custom-modal" role="content">
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header" style="background-color: #e28048;">
+              <h4 class="modal-title text-light">Login</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
             </div>
+            <div class="modal-body" style="background-color: #e9ecef;">
+              <form style="max-width: 300px; margin: 0 auto;">
+                <div class="form-group">
+                  <label for="exampleInputEmail3">Email address</label>
+                  <input type="email" class="form-control form-control-sm" id="exampleInputEmail3" placeholder="Enter email">
+                </div>
+                <div class="form-group">
+                  <label for="exampleInputPassword3">Password</label>
+                  <input type="password" class="form-control form-control-sm" id="exampleInputPassword3" placeholder="Password">
+                </div>
+                <div class="form-group">
+                  <a href="#" class="text-primary">Forgotten password?</a>
+                </div>
+                <div class="form-group form-check">
+                  <input class="form-check-input" type="checkbox" id="rememberMeCheck">
+                  <label class="form-check-label" for="rememberMeCheck">Remember me</label>
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-primary btn-block">Sign in</button>
+                </div>
+                <div class="form-group text-center">
+                  <hr style="width: 100%; margin-top: 0; margin-bottom: 0;">
+                </div>
+                <div class="form-group">
+                  <button type="submit" class="btn btn-success btn-block">Create new account</button>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+      
+      
 
     <header class="jumbotron">
         <div class="container">
